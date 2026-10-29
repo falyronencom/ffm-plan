@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Fabric's — состав работ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Unbounded:wght@500;600&display=swap">
+<style>
+/* Отдельная страница состава работ и сроков — без сумм (слово Координатора 29.10.2026); одна колонка, на компьютере два заказа рядом */
+:root {
+  --bg: #f1f3f0; --panel: #ffffff; --ink: #1a1d1c; --mute: #5c6460; --line: #d8dcd7;
+  --display: 'Unbounded', 'Arial Black', Arial, sans-serif;
+  --body: 'Golos Text', 'Segoe UI', Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #131615; --panel: #1b1f1d; --ink: #e8ece9; --mute: #9aa39e; --line: #2c3330; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--body); }
+.page {
+  max-width: 1180px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 56px;
+}
+p { margin: 0; }
+.eyebrow { font: 600 12px/1.3 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--mute); }
+h1 { font: 600 clamp(28px, 6vw, 48px)/1.1 var(--display); text-wrap: balance; margin: 12px 0 0; }
+h2 { font: 600 20px/1.3 var(--body); margin: 8px 0 0; text-wrap: balance; }
+.lead { max-width: 64ch; color: var(--mute); margin-top: 16px; font-size: 17px; }
+.orders { display: grid; gap: 16px; margin-top: 28px; }
+.order { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 22px; min-width: 0; }
+.steps { list-style: none; counter-reset: step; padding: 0; margin: 18px 0 0; display: grid; gap: 14px; }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 30px 1fr; column-gap: 10px; }
+.steps li::before { content: counter(step); grid-row: span 3; font: 600 16px/1.45 var(--display); color: var(--mute); }
+.steps li > * { grid-column: 2; }
+.steps b { font-weight: 600; }
+.steps span { color: var(--mute); font-size: 14.5px; }
+.steps em { font-style: normal; font-size: 13.5px; font-weight: 600; margin-top: 2px; }
+.need { margin-top: 16px; font-size: 14.5px; color: var(--mute); }
+.need b { color: var(--ink); font-weight: 600; }
+footer { margin-top: 32px; font-size: 14px; color: var(--mute); }
+footer a { color: var(--ink); }
+@media (min-width: 900px) {
+  .orders { grid-template-columns: 1.15fr 1fr; align-items: start; }
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <p class="eyebrow">Fabric's · состав работ · 29 октября 2026</p>
+  <h1>Новый сайт Fabric's: состав работ и сроки</h1>
+  <p class="lead">Из чего состоит работа и сколько времени займёт каждый этап. Сроки примерные: уточним, когда подготовим текущие серверы и сделаем копию каталога.</p>
+  <div class="orders">
+    <article class="order">
+      <p class="eyebrow">Первый заказ · примерно 8–10 недель</p>
+      <h2>Новый сайт Fabric's и удобная админка каталога</h2>
+      <ol class="steps">
+        <li><b>Дизайн всех страниц</b><span>Главная, каталог и виды тканей, коллекция, подбор, поиск, где купить, о компании, контакты — для телефона и компьютера</span><em>1–2 недели</em></li>
+        <li><b>Сайт на новом домене</b><span>Каталог 54 коллекций и 861 оттенка, поиск по названию и номеру цвета, подбор под задачу, «Заказать в Viber», заявка на образец, дилеры</span><em>3–4 недели</em></li>
+        <li><b>Админка каталога вместо CRM</b><span>Коллекция и оттенки с фото — перетащить файлы; свойства и уход — галочками; «новинка» и «распродажа»; QR-код и PDF коллекции одной кнопкой</span><em>2–3 недели, вместе с сайтом</em></li>
+        <li><b>Перенос данных</b><span>Все коллекции, оттенки, тексты и документы; фото — в полном размере</span><em>около 1 недели</em></li>
+        <li><b>Поиск и переезд без потерь</b><span>Старые адреса и QR-коды на образцах ведут на новые страницы; сайт настроен для Яндекса и Google</span><em>около 1 недели</em></li>
+        <li><b>Запуск и поддержка</b><span>Проверка с телефонов и компьютеров, исправления после запуска</span><em>2 недели</em></li>
+      </ol>
+      <p class="need"><b>Нужно от компании:</b> исходники фото оттенков, тексты о компании, список дилеров с адресами, доступ к новому домену и к Метрике.</p>
+      <p class="need"><b>Не входит:</b> кабинет дилера и заказы из Viber (это второй заказ), другие языки, фотосъёмка.</p>
+    </article>
+    <article class="order">
+      <p class="eyebrow">Второй заказ · примерно 2–3 месяца</p>
+      <h2>Кабинет дилера и заказы без ручного переноса</h2>
+      <ol class="steps">
+        <li><b>Кабинет дилера</b><span>Заявка на коллекцию, номер цвета и метраж прямо с сайта; история заявок</span><em>3–4 недели</em></li>
+        <li><b>Наличие на складе</b><span>Дилер видит, сколько метров ткани есть</span><em>когда появится учёт остатков</em></li>
+        <li><b>Заказы из Viber и почты</b><span>Сообщение «Brabus 25 — 13,7 м» становится черновиком заказа: система сама проверяет коллекцию и номер цвета, менеджер подтверждает одним нажатием</span><em>3–4 недели</em></li>
+        <li><b>Связь с ERP</b><span>Подтверждённые заказы уходят в ERP, остатки приходят обратно</span><em>когда ERP будет готова</em></li>
+      </ol>
+      <p class="need">Сроки второго заказа зависят от готовности ERP и учёта склада.</p>
+    </article>
+  </div>
+  <footer>Наброски дизайна сайта — по отдельной ссылке: <a href="https://falyronencom.github.io/ffm-sketches/">falyronencom.github.io/ffm-sketches</a></footer>
+</main>
+</body>
+</html>
